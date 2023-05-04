@@ -1,0 +1,31 @@
+yolo is a object detection algorithm
+yolo (you only look once)
+so yolo is basically Convolutional Neural Network which means that it accepts an image or a video it scans through it and it identifies objects and actions in the video or images
+so we can apply this to our dataset, train the model and deploy it
+imagine this as a student going to class, they need to go to a specific class
+if they go to physics class they might become a physicist
+if they go to an art class they might become an artist 
+and yolo works the same way
+so we present it with what we want it to learn 
+- upload data
+- train a model
+Ultralytics yolo is made using pytorch
+yolov5 works on the top of pytorch
+leverage the base model to perform some detections, it trained on the coco data set (basically is a open source data set), so roughly we will have 80 different classes that we will be able to detect
+and then we will fine tune our sign recognition model
+so that we will be able to detect what sign we are showing
+after that we will test this in real time 
+
+image and its related text file - this is how yolo accepts data 
+when we open the text file- first of all we will get the class name and after those are the 4 bounding box coordinates
+for every image we need one text file
+
+train.py this file is responsible to train your algorithm on your data
+img 415 - this is the size of the image
+batch 16 - 16 batches
+custom_data - so from this file the algorithm will see where ur data is
+inside custom_data 
+training data is present and test data is present
+no. of classes are 5 and also name of the classes are given
+so from here it is getting the info about the dataset on which u want to perform ur training
+we will get the yolo5s.pt weight file by default
